@@ -28,7 +28,10 @@ namespace IdentityProviderService
     public class CompositeType
     {
         bool boolValue = true;
-        string stringValue = "Hello ";
+        string userName = "Hello ";
+        string userAddr = "";
+        string userNickName = "";
+        string encryptedAndEncodedText = "";
 
         [DataMember]
         public bool BoolValue
@@ -38,10 +41,33 @@ namespace IdentityProviderService
         }
 
         [DataMember]
-        public string StringValue
+        public string UserName
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get { return userName; }
+            set { userName = value; }
         }
+
+        [DataMember]
+        public string UserNickName
+        {
+            get{return userNickName;}
+            set { userNickName = value; }
+        }
+
+        [DataMember]
+        public string UserAddr
+        {
+            get{return userAddr;}
+            set { userAddr = value; }
+        }
+        [DataMember]
+        public string EncryptedAndEncodedText
+        {
+            get{return encryptedAndEncodedText;}
+            set { encryptedAndEncodedText = value; }
+        }
+    
+
+    
     }
 }
